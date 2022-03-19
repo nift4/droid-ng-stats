@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 0rem;
+  .left,
+  .right {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: #474747;
+  }
+  .left {
+    h1 {
+      font-size: 4rem;
+    }
+    p {
+      font-size: 1.2rem;
+      line-height: 2rem;
+      width: 80%;
+      margin: 10px 0px;
+    }
+  }
+  .right {
+    h1 {
+      font-size: 2rem;
+      line-height: 3rem;
+    }
+    .num {
+      font-size: 3rem;
+      font-weight: lighter;
+    }
+  }
+}
+
+.table-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .countries {
+    margin: 2rem 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: auto;
+    color: #606060;
+    h3 {
+      margin: 0.5rem 0.4rem;
+    }
+  }
+}
+
+table {
+  width: 40%;
+  font-family: arial, sans-serif;
+  border: 2px solid #e2e2e2;
+  color: #606060;
+  font-size: 1.4rem;
+}
+td,
+th {
+  text-align: left;
+  padding: 8px;
+  border-right: 2px solid #e2e2e2;
+}
+
+.table-head {
+  font-weight: bolder;
+}
+
+.details-container {
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  font-weight: lighter;
+  .heading-text {
+    color: #606060;
+    font-size: 1.2rem;
+    margin: 1rem 0rem;
+    .deviceName {
+      font-weight: bold !important;
+    }
+    table {
+      margin-left: 6vw;
+      margin-top: 2vw;
+      width: 50vw !important;
+    }
+    h1 {
+      font-weight: 200;
+      color: #7a7a7a;
+    }
+    .details {
+      font-size: 1rem;
+      line-height: 2.4rem;
+      font-weight: lighter !important;
+      color: #7a7a7a;
+      margin-top: 3vw;
+      h2 {
+        margin-left: 5rem;
+        .space {
+          margin: 0rem 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and(max-width: 700px) {
+  .container {
+    padding: 1rem 0rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    .left,
+    .right {
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  .details-container {
+    padding: 0rem 1rem;
+    .heading-text {
+      margin: 0.5rem 0rem;
+      h1 {
+        font-size: 1.2rem;
+      }
+      .details {
+        margin: 0rem 1rem;
+        line-height: 0rem;
+        .space {
+          margin: 0rem 1rem;
+        }
+        h2 {
+          font-size: 0.8rem;
+          margin: 0rem 1rem;
+        }
+      }
+    }
+  }
+}
