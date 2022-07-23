@@ -18,7 +18,7 @@ function Country() {
   }, []);
   const getDetails = () => {
     axios
-      .get(`https://stats.materium.eu.org/api/v1/getCountry/${country}`)
+      .get(`https://stats.droid-ng.eu.org/api/v1/getCountry/${country}`)
       .then((res) => {
         setCountryDetails(res.data);
         setTopDevices(res.data.top_devices);

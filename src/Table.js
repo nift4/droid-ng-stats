@@ -17,14 +17,14 @@ class Table extends React.Component {
     const deviceArray = [];
     const countriesArray = [];
     await axios
-      .get("https://stats.materium.eu.org/api/v1/getAllDevices")
+      .get("https://stats.droid-ng.eu.org/api/v1/getAllDevices")
       .then((res) => {
         this.setState({ devices: res.data });
       })
       .catch((err) => console.log(err));
     await this.state.devices.forEach((device) => {
       axios
-        .get(`https://stats.materium.eu.org/api/v1/getDevice/${device}`)
+        .get(`https://stats.droid-ng.eu.org/api/v1/getDevice/${device}`)
         .then((res) => {
           deviceArray.push(res.data);
           if (deviceArray.length === this.state.devices.length) {
@@ -34,14 +34,14 @@ class Table extends React.Component {
         .catch((err) => console.log(err));
     });
     await axios
-      .get("https://stats.materium.eu.org/api/v1/getTopCountries")
+      .get("https://stats.droid-ng.eu.org/api/v1/getTopCountries")
       .then((res) => {
         this.setState({ countries: res.data });
       })
       .catch((err) => console.log(err));
     await this.state.countries.forEach((country) => {
       axios
-        .get(`https://stats.materium.eu.org/api/v1/getCountry/${country}`)
+        .get(`https://stats.droid-ng.eu.org/api/v1/getCountry/${country}`)
         .then((res) => {
           const obj = {
             country: country,
@@ -66,7 +66,7 @@ class Table extends React.Component {
             </tr>
             {this.state.device.map((singleDev, index) => {
               return (
-                <tr key={index}>
+                <tr key={index} className="margin_table">
                   <td>
                     {" "}
                     <Link

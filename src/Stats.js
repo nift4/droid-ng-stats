@@ -12,7 +12,7 @@ class Stats extends React.Component {
   }
   componentDidMount() {
     axios
-      .get("https://stats.materium.eu.org/api/v1/getAllDevices")
+      .get("https://stats.droid-ng.eu.org/api/v1/getAllDevices")
       .then((res) => {
         this.setState({ res: res.data });
       })
@@ -25,8 +25,8 @@ class Stats extends React.Component {
           <div className="left">
             <h1>Statistics</h1>
             <p>
-              Statistics of Project Materium, Total number of devices,their
-              respective verions, number of downloads, most downloaded etc.
+              Statistics of Droid-ng, Total number of devices,their respective
+              verions, number of downloads, most downloaded etc.
             </p>
           </div>
           <div className="right">

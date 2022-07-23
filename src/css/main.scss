@@ -20,7 +20,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    color: #474747;
+    color: #343434;
   }
   .left {
     h1 {
@@ -56,7 +56,7 @@ body {
     align-items: center;
     justify-content: space-around;
     height: auto;
-    color: #606060;
+    color: #343434;
     h3 {
       margin: 0.5rem 0.4rem;
     }
@@ -67,13 +67,18 @@ table {
   width: 40%;
   font-family: arial, sans-serif;
   border: 2px solid #e2e2e2;
-  color: #606060;
+  color: #343434;
   font-size: 1.4rem;
+  padding: 0.5rem 1rem;
+  margin: 2rem 0rem;
 }
 td,
 th {
   text-align: left;
   padding: 8px;
+}
+
+.margin_table {
   border-right: 2px solid #e2e2e2;
 }
 
@@ -87,7 +92,7 @@ th {
   flex-direction: column;
   font-weight: lighter;
   .heading-text {
-    color: #606060;
+    color: #343434;
     font-size: 1.2rem;
     margin: 1rem 0rem;
     .deviceName {
@@ -100,13 +105,13 @@ th {
     }
     h1 {
       font-weight: 200;
-      color: #7a7a7a;
+      color: #343434;
     }
     .details {
       font-size: 1rem;
       line-height: 2.4rem;
       font-weight: lighter !important;
-      color: #7a7a7a;
+      color: #343434;
       margin-top: 3vw;
       h2 {
         margin-left: 5rem;

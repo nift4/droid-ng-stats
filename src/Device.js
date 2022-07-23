@@ -18,7 +18,7 @@ function Device() {
 
   const getDetails = () => {
     axios
-      .get(`https://stats.materium.eu.org/api/v1/getDevice/${device.device}`)
+      .get(`https://stats.droid-ng.eu.org/api/v1/getDevice/${device.device}`)
       .then((res) => {
         console.log(res.data);
         setDetails(res.data);
