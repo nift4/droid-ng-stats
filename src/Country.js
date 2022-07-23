@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import axios from "axios";
-import { countries } from "country-data";
 import { BsFillPhoneFill, BsDownload } from "react-icons/bs";
 import { BiWorld } from "react-icons/bi";
 import { VscVersions } from "react-icons/vsc";
@@ -13,9 +12,6 @@ function Country() {
   const [topVersions, setTopVersions] = useState({});
   const location = useLocation();
   const country = location.state.country;
-  useEffect(() => {
-    getDetails();
-  }, []);
   const getDetails = () => {
     axios
       .get(`https://stats.droid-ng.eu.org/api/v1/getCountry/${country}`)
@@ -27,6 +23,9 @@ function Country() {
       })
       .catch((err) => console.log(err));
   };
+  useEffect(() => {
+    getDetails();
+  }, []);
 
   return (
     <div>
