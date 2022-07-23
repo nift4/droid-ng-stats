@@ -12,7 +12,7 @@ function Country() {
   const [topVersions, setTopVersions] = useState({});
   const location = useLocation();
   const country = location.state.country;
-  const getDetails = () => {
+  useEffect(() => {
     axios
       .get(`https://stats.droid-ng.eu.org/api/v1/getCountry/${country}`)
       .then((res) => {
@@ -22,10 +22,7 @@ function Country() {
         console.log(countryDetails);
       })
       .catch((err) => console.log(err));
-  };
-  useEffect(() => {
-    getDetails();
-  }, []);
+  }, [country, countryDetails]);
 
   return (
     <div>
