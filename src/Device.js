@@ -13,10 +13,6 @@ function Device() {
   const [topCountries, setTopCountries] = useState({});
   const [latest, setLatest] = useState({});
   useEffect(() => {
-    getDetails();
-  }, []);
-
-  const getDetails = () => {
     axios
       .get(`https://stats.droid-ng.eu.org/api/v1/getDevice/${device.device}`)
       .then((res) => {
@@ -26,7 +22,8 @@ function Device() {
         setLatest(res.data.top_versions);
       })
       .catch((err) => console.log(err));
-  };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <div>
