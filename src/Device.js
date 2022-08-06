@@ -1,23 +1,21 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { BsFillPhoneFill, BsDownload } from "react-icons/bs";
 import { BiWorld } from "react-icons/bi";
 import { VscVersions } from "react-icons/vsc";
 import "./css/main.css";
 
 function Device() {
-  const location = useLocation();
-  const device = location.state;
   const [details, setDetails] = useState({});
   const [topCountries, setTopCountries] = useState({});
   const [latest, setLatest] = useState({});
   const [topVersions, setTopVersions] = useState({});
+  const params = useParams();
   useEffect(() => {
     axios
-      .get(`https://stats.droid-ng.eu.org/api/v1/getDevice/${device.device}`)
+      .get(`https://stats.droid-ng.eu.org/api/v1/getDevice/${params.device}`)
       .then((res) => {
-        console.log(res.data);
         setDetails(res.data);
         setTopCountries(res.data.top_countries);
         setLatest(res.data.top_versions);
