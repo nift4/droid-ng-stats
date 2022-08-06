@@ -95,17 +95,19 @@ class Table extends React.Component {
               </tr>
               {this.state.countriesList.map((country, index) => {
                 return (
-                  <tr key={index}>
-                    <Link
-                      to={`/en/${country.country}`}
-                      state={{ country: country.country }}
-                      style={{
-                        textDecoration: "none",
-                        color: "#606060",
-                      }}
-                    >
-                      {country.country}
-                    </Link>
+                  <tr key={index} className="margin_table">
+                    <td>
+                      <Link
+                        to={`/en/${country.country}`}
+                        state={{ country: country.country }}
+                        style={{
+                          textDecoration: "none",
+                          color: "#606060",
+                        }}
+                      >
+                        {country.country}
+                      </Link>
+                    </td>
                     <td>{country.Installations}</td>
                   </tr>
                 );

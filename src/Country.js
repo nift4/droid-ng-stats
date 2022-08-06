@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import axios from "axios";
-import { BsFillPhoneFill, BsDownload } from "react-icons/bs";
-import { BiWorld } from "react-icons/bi";
+import { BsDownload } from "react-icons/bs";
+import { BiDevices, BiWorld } from "react-icons/bi";
 import { VscVersions } from "react-icons/vsc";
 import "./css/main.css";
 
@@ -30,7 +30,7 @@ function Country() {
         <div className="details-container">
           <span className="heading-text">
             <h1 className="deviceName">
-              <BsFillPhoneFill
+              <BiWorld
                 style={{
                   margin: "0rem 1rem",
                 }}
@@ -50,12 +50,12 @@ function Country() {
           </span>
           <span className="heading-text">
             <h1>
-              <BiWorld
+              <BiDevices
                 style={{
                   margin: "0rem 1rem",
                 }}
               />
-              Top installed countries:
+              Top Devices:
             </h1>
             {Object.keys(topDevices).map((key, index) => (
               <span className="details" key={index}>

@@ -12,6 +12,7 @@ function Device() {
   const [details, setDetails] = useState({});
   const [topCountries, setTopCountries] = useState({});
   const [latest, setLatest] = useState({});
+  const [topVersions, setTopVersions] = useState({});
   useEffect(() => {
     axios
       .get(`https://stats.droid-ng.eu.org/api/v1/getDevice/${device.device}`)
@@ -20,6 +21,7 @@ function Device() {
         setDetails(res.data);
         setTopCountries(res.data.top_countries);
         setLatest(res.data.top_versions);
+        setTopVersions(res.data.top_builds);
       })
       .catch((err) => console.log(err));
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -49,7 +51,7 @@ function Device() {
           </h1>
         </span>
         <span className="heading-text">
-          <h1>
+          <h1 style={{ margin: "1rem 0rem" }}>
             <BiWorld
               style={{
                 margin: "0rem 1rem",
@@ -84,6 +86,30 @@ function Device() {
                 <tr key={index}>
                   <td>{key}</td>
                   <td>{latest[key]}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </span>
+        <span className="heading-text">
+          <h1>
+            <VscVersions
+              style={{
+                margin: "0rem 1rem",
+              }}
+            />
+            Top versions
+          </h1>
+          <table>
+            <tbody>
+              <tr>
+                <td>Version</td>
+                <td>Downloads</td>
+              </tr>
+              {Object.keys(topVersions).map((key, index) => (
+                <tr key={index}>
+                  <td>{key}</td>
+                  <td>{topVersions[key]}</td>
                 </tr>
               ))}
             </tbody>
