@@ -25,8 +25,8 @@ class Stats extends React.Component {
           <div className="left">
             <h1>Statistics</h1>
             <p>
-              Statistics of Droid-ng, Total number of devices,their respective
-              verions, number of downloads, most downloaded etc.
+              Statistics of droid-ng installations: Total number of devices, their respective
+              verions, number of installs, most installed, country popularity etc.
             </p>
           </div>
           <div className="right">
