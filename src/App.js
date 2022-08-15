@@ -11,7 +11,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Stats />} />
           <Route path="/:device" element={<Device />} />
-          <Route path="/en/:coutry" element={<Country />} />
+          <Route path="/en/:country" element={<Country />} />
         </Routes>
       </BrowserRouter>
     </div>
