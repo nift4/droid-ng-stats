@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import axios from "axios";
 import { BsDownload } from "react-icons/bs";
 import { BiDevices, BiWorld } from "react-icons/bi";
@@ -10,8 +10,8 @@ function Country() {
   const [countryDetails, setCountryDetails] = useState({});
   const [topDevices, setTopDevices] = useState({});
   const [topVersions, setTopVersions] = useState({});
-  const location = useLocation();
-  const country = location.state.country;
+  const params = useParams();
+  const country = params.country;
   useEffect(() => {
     axios
       .get(`https://stats.droid-ng.eu.org/api/v1/getCountry/${country}`)
