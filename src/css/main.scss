@@ -6,6 +6,7 @@
 
 body {
   font-family: sans-serif;
+  background: #272727;
 }
 
 .container {
@@ -20,15 +21,15 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    color: #343434;
+    color: white;
   }
   .left {
     h1 {
       font-size: 4rem;
     }
     p {
-      font-size: 1.2rem;
-      line-height: 2rem;
+      font-size: 1.5rem;
+      line-height: 3rem;
       width: 80%;
       margin: 10px 0px;
     }
@@ -45,6 +46,18 @@ body {
   }
 }
 
+.no_devices {
+  text-align: center;
+  font-size: 3rem;
+  color: white;
+  font-weight: bold;
+  span {
+    padding: 0.3rem 2rem;
+    background: #fb8c4e;
+    border-radius: 10px;
+  }
+}
+
 .table-container {
   display: flex;
   align-items: center;
@@ -56,7 +69,7 @@ body {
     align-items: center;
     justify-content: space-around;
     height: auto;
-    color: #343434;
+    color: white;
     h3 {
       margin: 0.5rem 0.4rem;
     }
@@ -66,24 +79,19 @@ body {
 table {
   width: 40%;
   font-family: arial, sans-serif;
-  border: 2px solid #e2e2e2;
-  color: #343434;
   font-size: 1.4rem;
   padding: 0.5rem 1rem;
+  color: white;
+  background: #616161;
   margin: 2rem 0rem;
-}
-td,
-th {
-  text-align: left;
-  padding: 8px;
-}
-
-.margin_table {
-  border-right: 2px solid #e2e2e2;
-}
-
-.table-head {
-  font-weight: bolder;
+  td,
+  th {
+    text-align: left;
+    padding: 8px;
+  }
+  .table-head {
+    font-weight: bolder;
+  }
 }
 
 .details-container {
@@ -93,7 +101,7 @@ th {
   font-weight: lighter;
   margin: 1rem 0rem;
   .heading-text {
-    color: #343434;
+    color: white;
     font-size: 1.2rem;
     margin: 1rem 0rem;
     .deviceName {
@@ -106,13 +114,13 @@ th {
     }
     h1 {
       font-weight: 200;
-      color: #343434;
+      color: white;
     }
     .details {
       font-size: 1rem;
       line-height: 2.4rem;
       font-weight: lighter !important;
-      color: #343434;
+      color: white;
       margin-top: 3vw;
       h2 {
         margin-left: 5rem;

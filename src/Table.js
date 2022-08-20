@@ -67,20 +67,32 @@ class Table extends React.Component {
             {this.state.device.map((singleDev, index) => {
               return (
                 <tr key={index} className="margin_table">
-                  <td>
+                  <td
+                    style={{
+                      backgroundColor: "#9f9f9f",
+                      borderRadius: "3px",
+                    }}
+                  >
                     {" "}
                     <Link
                       to={`/${singleDev.name}`}
                       state={{ device: singleDev.name }}
                       style={{
                         textDecoration: "none",
-                        color: "#606060",
+                        color: "white",
                       }}
                     >
                       {singleDev.name}
                     </Link>
                   </td>
-                  <td>{singleDev.installations}</td>
+                  <td
+                    style={{
+                      backgroundColor: "#878787",
+                      borderRadius: "3px",
+                    }}
+                  >
+                    {singleDev.installations}
+                  </td>
                 </tr>
               );
             })}
@@ -96,19 +108,31 @@ class Table extends React.Component {
               {this.state.countriesList.map((country, index) => {
                 return (
                   <tr key={index} className="margin_table">
-                    <td>
+                    <td
+                      style={{
+                        backgroundColor: "#9f9f9f",
+                        borderRadius: "3px",
+                      }}
+                    >
                       <Link
                         to={`/en/${country.country}`}
                         state={{ country: country.country }}
                         style={{
                           textDecoration: "none",
-                          color: "#606060",
+                          color: "white",
                         }}
                       >
                         {country.country}
                       </Link>
                     </td>
-                    <td>{country.Installations}</td>
+                    <td
+                      style={{
+                        backgroundColor: "#878787",
+                        borderRadius: "3px",
+                      }}
+                    >
+                      {country.Installations}
+                    </td>
                   </tr>
                 );
               })}

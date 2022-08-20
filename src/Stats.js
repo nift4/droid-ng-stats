@@ -2,6 +2,7 @@ import React from "react";
 import "./css/main.css";
 import Table from "./Table";
 import axios from "axios";
+import Svg from "./Svg";
 
 class Stats extends React.Component {
   constructor(props) {
@@ -30,9 +31,11 @@ class Stats extends React.Component {
             </p>
           </div>
           <div className="right">
-            <h1>Total number of devices:</h1>
-            <h1 className="num">{this.state.res.length}</h1>
+            <Svg />
           </div>
+        </div>
+        <div className="no_devices">
+          Total Number of devices: <span>{this.state.res.length}</span>
         </div>
         <Table />
       </div>
