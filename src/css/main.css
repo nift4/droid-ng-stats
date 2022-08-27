@@ -6,7 +6,7 @@
 
 body {
   font-family: sans-serif;
-  background: #272727;
+  background: white;
 }
 
 .container {
@@ -22,7 +22,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  color: white;
+  color: rgb(35, 35, 35);
 }
 .container .left h1 {
   font-size: 4rem;
@@ -45,7 +45,7 @@ body {
 .no_devices {
   text-align: center;
   font-size: 3rem;
-  color: white;
+  color: rgb(35, 35, 35);
   font-weight: bold;
 }
 .no_devices span {
@@ -66,7 +66,7 @@ body {
   align-items: center;
   justify-content: space-around;
   height: auto;
-  color: white;
+  color: rgb(255, 0, 0);
 }
 .table-container .countries h3 {
   margin: 0.5rem 0.4rem;
@@ -77,8 +77,9 @@ table {
   font-family: arial, sans-serif;
   font-size: 1.4rem;
   padding: 0.5rem 1rem;
-  color: white;
-  background: #616161;
+  color: rgb(35, 35, 35);
+  background: #ebebeb;
+  border-radius: 10px;
   margin: 2rem 0rem;
 }
 table td,
@@ -98,7 +99,7 @@ table .table-head {
   margin: 1rem 0rem;
 }
 .details-container .heading-text {
-  color: white;
+  color: rgb(35, 35, 35);
   font-size: 1.2rem;
   margin: 1rem 0rem;
 }
@@ -112,13 +113,13 @@ table .table-head {
 }
 .details-container .heading-text h1 {
   font-weight: 200;
-  color: white;
+  color: rgb(35, 35, 35);
 }
 .details-container .heading-text .details {
   font-size: 1rem;
   line-height: 2.4rem;
   font-weight: lighter !important;
-  color: white;
+  color: rgb(35, 35, 35);
   margin-top: 3vw;
 }
 .details-container .heading-text .details h2 {
@@ -129,6 +130,14 @@ table .table-head {
 }
 
 @media only screen and (max-width: 700px) {
+  .container .left h1 {
+    font-size: 3rem;
+  }
+  .container .left p {
+    font-size: 1.2rem;
+    line-height: 2rem;
+    text-align: left;
+  }
   .table-container {
     flex-direction: column;
   }

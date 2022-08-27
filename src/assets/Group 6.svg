@@ -12,13 +12,6 @@
 <g id="bar4">
 <path id="Rectangle 4" d="M387 67C387 61.4771 391.477 57 397 57H424C429.523 57 434 61.4772 434 67V395H387V67Z" fill="#4AFFBE"/>
 </g>
-<path id="Vector 1" d="M134 0V512" stroke="white" stroke-width="2"/>
-<path id="Vector 2" d="M570 395L-5.126e-06 395" stroke="url(#paint0_linear_5_104)" stroke-width="2"/>
+<path id="Vector 1" d="M134 0V512" stroke="#292929" stroke-width="2"/>
 </g>
-<defs>
-<linearGradient id="paint0_linear_5_104" x1="570" y1="395.5" x2="-4.37115e-08" y2="395.5" gradientUnits="userSpaceOnUse">
-<stop stop-color="white" stop-opacity="0.25"/>
-<stop offset="1" stop-color="white"/>
-</linearGradient>
-</defs>
 </svg>

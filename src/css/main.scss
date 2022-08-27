@@ -6,7 +6,7 @@
 
 body {
   font-family: sans-serif;
-  background: #272727;
+  background: white;
 }
 
 .container {
@@ -21,7 +21,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    color: white;
+    color: rgb(35, 35, 35);
   }
   .left {
     h1 {
@@ -49,7 +49,7 @@ body {
 .no_devices {
   text-align: center;
   font-size: 3rem;
-  color: white;
+  color: rgb(35, 35, 35);
   font-weight: bold;
   span {
     padding: 0.3rem 2rem;
@@ -69,7 +69,7 @@ body {
     align-items: center;
     justify-content: space-around;
     height: auto;
-    color: white;
+    color: rgb(255, 0, 0);
     h3 {
       margin: 0.5rem 0.4rem;
     }
@@ -81,8 +81,9 @@ table {
   font-family: arial, sans-serif;
   font-size: 1.4rem;
   padding: 0.5rem 1rem;
-  color: white;
-  background: #616161;
+  color: rgb(35, 35, 35);
+  background: #ebebeb;
+  border-radius: 10px;
   margin: 2rem 0rem;
   td,
   th {
@@ -101,7 +102,7 @@ table {
   font-weight: lighter;
   margin: 1rem 0rem;
   .heading-text {
-    color: white;
+    color: rgb(35, 35, 35);
     font-size: 1.2rem;
     margin: 1rem 0rem;
     .deviceName {
@@ -114,13 +115,13 @@ table {
     }
     h1 {
       font-weight: 200;
-      color: white;
+      color: rgb(35, 35, 35);
     }
     .details {
       font-size: 1rem;
       line-height: 2.4rem;
       font-weight: lighter !important;
-      color: white;
+      color: rgb(35, 35, 35);
       margin-top: 3vw;
       h2 {
         margin-left: 5rem;
@@ -133,6 +134,18 @@ table {
 }
 
 @media only screen and(max-width: 700px) {
+  .container {
+    .left {
+      h1 {
+        font-size: 3rem;
+      }
+      p {
+        font-size: 1.2rem;
+        line-height: 2rem;
+        text-align: left;
+      }
+    }
+  }
   .table-container {
     flex-direction: column;
   }

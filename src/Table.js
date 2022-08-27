@@ -69,7 +69,7 @@ class Table extends React.Component {
                 <tr key={index} className="margin_table">
                   <td
                     style={{
-                      backgroundColor: "#9f9f9f",
+                      backgroundColor: "white",
                       borderRadius: "3px",
                     }}
                   >
@@ -79,7 +79,7 @@ class Table extends React.Component {
                       state={{ device: singleDev.name }}
                       style={{
                         textDecoration: "none",
-                        color: "white",
+                        color: "black",
                       }}
                     >
                       {singleDev.name}
@@ -87,7 +87,7 @@ class Table extends React.Component {
                   </td>
                   <td
                     style={{
-                      backgroundColor: "#878787",
+                      backgroundColor: "white",
                       borderRadius: "3px",
                     }}
                   >
@@ -110,7 +110,7 @@ class Table extends React.Component {
                   <tr key={index} className="margin_table">
                     <td
                       style={{
-                        backgroundColor: "#9f9f9f",
+                        backgroundColor: "white",
                         borderRadius: "3px",
                       }}
                     >
@@ -119,7 +119,7 @@ class Table extends React.Component {
                         state={{ country: country.country }}
                         style={{
                           textDecoration: "none",
-                          color: "white",
+                          color: "black",
                         }}
                       >
                         {country.country}
@@ -127,7 +127,7 @@ class Table extends React.Component {
                     </td>
                     <td
                       style={{
-                        backgroundColor: "#878787",
+                        backgroundColor: "white",
                         borderRadius: "3px",
                       }}
                     >
